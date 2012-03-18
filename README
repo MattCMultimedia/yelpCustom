@@ -8,7 +8,7 @@ Installation:
 
 2) Currently only responds to "I'm Hungry"
 
-3) To add new commands, (similar to smalltalk.py), copt/paste the code at the bottom (def search_im_hungry.....etc) to a new line
+3) To add new commands, (similar to smalltalk.py), copy/paste the code at the bottom (def search_im_hungry.....etc) to a new line
 
 4) Change @register to have new keywords
 
