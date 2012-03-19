@@ -52,7 +52,9 @@ class yelpSearch(Plugin):
      @register('en-GB', res['searchString']['en-GB'])
      @register('de-DE', res['searchString']['de-DE'])
      def yelp_search(self, speech, language, regex):
+          #this has been added
           global Title
+          #end additions
           self.say(yelpSearch.res['searching'][language],' ')
           mapGetLocation = self.getCurrentLocation()
           latitude = mapGetLocation.latitude
@@ -101,11 +103,19 @@ class yelpSearch(Plugin):
 
 #
 #Duplicate this section and rename things to create more commands
-     @register('en-US', ".*I'm.*hungry.*")
+     @register('en-US', "I'm.*hungry.*")
      def search_im_hungry(self, speech, language):
           global Title
           
           #this is the string to search for
           Title = "cheap dinner"
+          self.yelp_search(speech, language, Title)
+          
+     @register('en-US', ".*I.*want.*breakfast")
+     def search_im_hungry(self, speech, language):
+          global Title
+          
+          #this is the string to search for
+          Title = "cheap breakfast"
           self.yelp_search(speech, language, Title)
      
